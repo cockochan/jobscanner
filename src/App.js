@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import './App.css';
+import {Wordlist }from './wordlist.js'
 import keyword_extractor from 'keyword-extractor'
 import {Form,Col, Container,Button,Navbar} from 'react-bootstrap'
 function App() {
   const [jobText, setJobText]=useState('')
 
 
-
+console.log(Wordlist)
 const extraction_result = keyword_extractor.extract(jobText,{
                                                                 language:"english",
                                                                 remove_digits: true,
@@ -18,6 +19,7 @@ const extraction_result = keyword_extractor.extract(jobText,{
   return (
     <Container fluid>
         <h6 className='dark'>by Constantin Dimitrenco</h6>
+        <p className='dark'>constantin.dimitrenco@gmail.com</p>
         <Navbar  bg="primary" variant="dark"><Col>
   <Navbar.Brand href="#home"><h1 className="hugeTitle">Job desciption scanner® </h1>
    
@@ -35,7 +37,7 @@ const extraction_result = keyword_extractor.extract(jobText,{
       </Form><div style={{justifyItems:'space-around'}}>
       <h4 className="dark mt-2 ml-3">Extracted keywords:</h4>
 {
-  extraction_result.map(el=><Button variant="outline-primary" className='mt-3 ml-3'>{el}</Button>)
+  extraction_result.map(el=><Button key={el} variant={Wordlist.filter((elem)=>elem.toLowerCase()===el).length===0?"outline-primary":"outline-danger"} className='mt-3 ml-3'>{el}</Button>)
 }</div></Container>
  </Container>
   );
