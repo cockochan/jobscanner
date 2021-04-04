@@ -6,13 +6,17 @@
   height: 40vmin;
   pointer-events: none;
 }
-
+.dark{
+  color:rgb(11, 122, 226)
+}
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+.hugeTitle{
+  font-family: 'Kiwi Maru', serif;
+}
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
