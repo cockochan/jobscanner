@@ -19,6 +19,8 @@ const extraction_result = keyword_extractor.extract(jobText,{
     <Container className='mt-5'>
      <Jumbotron ><h1>Job desciption scanner </h1>
      <h6>by Constantin Dimitrenco</h6>
+     <p>can be used for any keywords now only cv's</p>
+     <h1> Wish you find a better job useing JOBSCANNER@</h1>
      </Jumbotron>
    
       <Form><Col>
