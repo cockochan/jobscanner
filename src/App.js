@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import keyword_extractor from 'keyword-extractor'
-import {FormControl,Navbar,Form,Col, Container,ButtonGroup, Jumbotron,Button} from 'react-bootstrap'
+import {FormControl,Navbar,Form,Col, Container,Jumbotron,Button} from 'react-bootstrap'
 function App() {
   const [jobText, setJobText]=useState('')
 
@@ -19,6 +19,7 @@ const extraction_result = keyword_extractor.extract(jobText,{
     <Container>
      <Navbar bg="light" expand="lg">
      <Jumbotron><h1>Job desciption scanner </h1>
+     <h6>by Constantin Dimitrenco</h6>
      </Jumbotron>
       </Navbar>
       <Form><Col>
