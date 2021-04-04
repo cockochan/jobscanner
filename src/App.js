@@ -18,11 +18,11 @@ const extraction_result = keyword_extractor.extract(jobText,{
   return (
     <Container>
      <Navbar bg="light" expand="lg">
-     <Jumbotron><h1>I am extractor i do extract </h1>
+     <Jumbotron><h1>Job desciption scanner </h1>
      </Jumbotron>
       </Navbar>
       <Form><Col>
-      <Form.Row><FormControl type='textarea' onChange={e=>setJobText(e.target.value)}></FormControl>  </Form.Row>
+      <Form.Row><FormControl type='textarea' onChange={e=>setJobText(e.target.value)} placeholder='paste job description here'></FormControl>  </Form.Row>
       <div></div>
       </Col>
       </Form><ListGroup>
