@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './App.css';
 import keyword_extractor from 'keyword-extractor'
-import {FormControl,Navbar,Form,Col, Container,Jumbotron,Button} from 'react-bootstrap'
+import {FormControl,Form,Col, Container,Jumbotron,Button} from 'react-bootstrap'
 function App() {
   const [jobText, setJobText]=useState('')
 
@@ -16,15 +16,13 @@ const extraction_result = keyword_extractor.extract(jobText,{
                                                            });
                                                        
   return (
-    <Container>
-     <Navbar bg="light" expand="lg">
-     <Jumbotron><h1>Job desciption scanner </h1>
+    <Container className='mt-5'>
+     <Jumbotron ><h1>Job desciption scanner </h1>
      <h6>by Constantin Dimitrenco</h6>
      </Jumbotron>
-      </Navbar>
+   
       <Form><Col>
-      <Form.Row><FormControl type='textarea' onChange={e=>setJobText(e.target.value)} placeholder='paste job description here'></FormControl>  </Form.Row>
-      <div></div>
+      <Form.Row><FormControl type='textarea'  onChange={e=>setJobText(e.target.value)} placeholder='paste job description here'></FormControl>  </Form.Row>
       </Col>
       </Form><div style={{justifyItems:'space-around'}}>
 {
